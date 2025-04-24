@@ -15,7 +15,7 @@ class MyAdminIndexView(AdminIndexView):
     @expose('/')
     def index(self):
         if not current_user.is_authenticated or current_user.username != 'admin':
-            return self.render('admin/no_access.html')
+            return self.render('non_admin.html')
         return super(MyAdminIndexView, self).index()
 
 def init_admin(app):
