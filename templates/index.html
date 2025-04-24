@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Головна</title>
+</head>
+<body>
+    <h1>Ласкаво просимо, {{ current_user.username }}!</h1>
+
+    {% if not test_completed %}
+        <a href="{{ url_for('test') }}">Почати тест</a>
+    {% else %}
+        <p>Остання оцінка: {{ grade }}</p>
+        <p>Середня оцінка: {{ average_grade }}</p>
+        <a href="{{ url_for('test') }}">Пройти тест ще раз</a>
+    {% endif %}
+
+    <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit">Вийти</button>
+    </form>
+</body>
+</html>

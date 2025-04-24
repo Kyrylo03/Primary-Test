@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Реєстрація</title>
+</head>
+<body>
+    <h1>Реєстрація</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.username.label }} {{ form.username() }}</p>
+        <p>{{ form.password.label }} {{ form.password() }}</p>
+        <p>{{ form.confirm_password.label }} {{ form.confirm_password() }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+    <p>Вже маєте обліковий запис? <a href="{{ url_for('login') }}">Увійти</a></p>
+</body>
+</html>

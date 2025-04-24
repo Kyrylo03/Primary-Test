@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+</head>
+<body>
+    <h1>Арифметичний тест</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form.q1.label }} {{ form.q1() }}</p>
+        <p>{{ form.q2.label }} {{ form.q2() }}</p>
+        <p>{{ form.q3.label }} {{ form.q3() }}</p>
+        <p>{{ form.q4.label }} {{ form.q4() }}</p>
+        <p>{{ form.q5.label }} {{ form.q5() }}</p>
+        <p>{{ form.q6.label }} {{ form.q6() }}</p>
+        <p>{{ form.q7.label }} {{ form.q7() }}</p>
+        <p>{{ form.q8.label }} {{ form.q8() }}</p>
+        <p>{{ form.q9.label }} {{ form.q9() }}</p>
+        <p>{{ form.q10.label }} {{ form.q10() }}</p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</body>
+</html>

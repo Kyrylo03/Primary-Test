@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Результат</title>
+</head>
+<body>
+    <h1>Результати</h1>
+    <p>Середній бал: {{ score }}/10</p>
+    <p>Оцінка: {{ grade }}</p>
+    <a href="{{ url_for('test') }}">Пройти ще раз</a>
+    <br>
+    <a href="{{ url_for('index') }}">Повернутися на головну</a>
+</body>
+</html>
