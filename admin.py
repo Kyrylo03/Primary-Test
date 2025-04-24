@@ -8,7 +8,7 @@ from flask_admin.base import AdminIndexView
 
 class MyModelView(ModelView):
     def is_accessible(self):
-        # Наприклад, дозволити лише користувачу з ім'ям "admin"
+        
         return current_user.is_authenticated and current_user.username == "admin"
 
 class MyAdminIndexView(AdminIndexView):
