@@ -8,11 +8,8 @@ from admin import init_admin
 
 app = Flask(__name__)
 app.config.from_object(Config)
-
 db.init_app(app)
 login_manager.init_app(app)
-
-# Ініціалізація бази та адмінки
 with app.app_context():
     db.create_all()
     init_admin(app)
@@ -93,6 +90,5 @@ def calculate_grade(score):
         return 'D'
     else:
         return 'F'
-
 if __name__ == 'main':
     app.run(debug=True)
